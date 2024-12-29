@@ -3,10 +3,16 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 import dotenv from "dotenv";
 import connectDB from "./utils/db.js";
-const app = express();
+import userRoutes from "./routes/user.route.js";
+import companyRoutes from "./routes/company.route.js";
+import jobRoutes from "./routes/job.route.js";
+import applicationRoutes from "./routes/application.route.js";
+
+
 
 dotenv.config();
 connectDB();
+const app = express();
 
 // Middleware
 app.use(express.json());
@@ -19,7 +25,14 @@ const corsOptions = {
 app.use(cors(corsOptions)); 
 
 
-app.listen(3000, () => {
+// Routes
+app.use("/api/user", userRoutes);
+app.use("/api/company", companyRoutes);
+app.use("/api/job", jobRoutes);
+app.use("/api/application", applicationRoutes);
+
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
      
-    console.log("Server is running on port 3000");
+    console.log(`Server is running on port ${ PORT} `);
 });
