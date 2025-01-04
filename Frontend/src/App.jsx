@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Navbar from './components/shared/Navbar'
-// import Login from './components/auth/Login'
-// import Signup from './components/auth/Signup'
+import Login from './components/auth/Login'
+import Signup from './components/auth/Signup'
 // import Home from './components/Home'
 // import Jobs from './components/Jobs'
 // import Browse from './components/Browse'
@@ -16,19 +16,19 @@ import Navbar from './components/shared/Navbar'
 // import ProtectedRoute from './components/admin/ProtectedRoute'
 
 
-// const appRouter = createBrowserRouter([
-//   {
-//     path: '/',
-//     element: <Home />
-//   },
-  // {
-  //   path: '/login',
-  //   element: <Login />
-  // },
-  // {
-  //   path: '/signup',
-  //   element: <Signup />
-  // },
+const appRouter = createBrowserRouter([
+  {
+    path: '/',
+    element: <Navbar />
+  },
+  {
+    path: '/login',
+    element: <Login />
+  },
+  {
+    path: '/signup',
+    element: <Signup />
+  },
   // {
   //   path: "/jobs",
   //   element: <Jobs />
@@ -71,13 +71,14 @@ import Navbar from './components/shared/Navbar'
   //   element:<ProtectedRoute><Applicants/></ProtectedRoute> 
   // },
 
-// ])
+])
 function App() {
 
   return (
     <div>
-      {/* <RouterProvider router={appRouter} /> */}
-      <Navbar />
+      <RouterProvider router={appRouter} />
+      hleoih
+      {/* <Navbar /> */}
     </div>
   )
 }
