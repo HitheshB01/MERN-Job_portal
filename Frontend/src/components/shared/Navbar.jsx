@@ -6,7 +6,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
-  const user = false;
+  const user = true;
 
   const logoutHandler = async () => {
     // try {
@@ -75,7 +75,7 @@ const Navbar = () => {
                       {/* <AvatarFallback>CN</AvatarFallback> */}
                     </Avatar>
                     <div>
-                      <h4 className="font-medium">Hithesh b</h4>
+                      <h4 className="font-medium">Hithesh B</h4>
                       <p className="text-sm text-muted-foreground">
                         Lorem ipsum dolor sit amet.
                       </p>
